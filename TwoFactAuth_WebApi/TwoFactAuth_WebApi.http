@@ -1,0 +1,6 @@
+@TwoFactAuth_WebApi_HostAddress = http://localhost:5269
+
+GET {{TwoFactAuth_WebApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

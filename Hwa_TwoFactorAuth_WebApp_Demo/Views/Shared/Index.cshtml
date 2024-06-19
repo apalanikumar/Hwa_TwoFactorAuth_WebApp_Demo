@@ -1,0 +1,49 @@
+﻿@using Microsoft.AspNetCore.Identity
+@using TwoFactorAuthWebApp.Models
+@using Microsoft.AspNetCore.Authentication;
+@using Microsoft.AspNetCore.Authorization;
+@model IEnumerable<TwoFactorAuthWebApp.Models.MemberViewModel>;
+
+@{
+    ViewBag.Title = "GetWeatherForecast";
+    //Layout = "Views/Shared/GetWeatherForecast.cshtml";
+}
+
+<h2>GetWeatherForecast</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.temperatureC)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.temperatureF)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.summary)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model.ToArray())
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.date)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.temperatureC)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.temperatureF)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.summary)
+            </td>            
+        </tr>
+    }
+
+</table>
